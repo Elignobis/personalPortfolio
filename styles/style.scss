@@ -23,7 +23,7 @@
 
 body{
     background-color: var(--color-primary);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.1rem;
     color: var(--color-white);
     transition: all .4s ease-in-out;
@@ -160,13 +160,16 @@ section{
             height: 90%;
             width: 68%;
             margin-left: 4rem;
-            background-color: var(--color-black);
+            background-color: transparent;
             transition: all .4s ease-in-out;
             img{
                 width: 100%;
                 height: 100%;
+                border: 4px solid yellow;
                 object-fit: cover;
+                box-shadow: 1px 2px 15px #fffb03a7;
                 transition: all .4s ease-in-out;
+                border-radius: 40% 70% 50% 60%;
                 filter: grayscale(100%);
                 &:hover{
                     filter: grayscale(0);
@@ -190,6 +193,9 @@ section{
             margin: 1.5rem 0;
             line-height: 2rem;
         }
+        .typing{
+            color: var(--color-secondary);
+        }
     }
 }
 
@@ -212,7 +218,8 @@ section{
                 cursor: default;
                 transform: translateY(-5px);
                 border: 1px solid var(--color-secondary);
-                box-shadow: 1px 2px 15px rgba(0,0,0,.32);
+                background-color: rgb(149, 24, 24);
+                box-shadow: 1px 2px 15px #fffb03a7;
             }
             .abt-text{
                 padding: 1.5rem;
@@ -237,7 +244,7 @@ section{
                         top: 15px;
                         width: 2rem;
                         height: 2px;
-                        background-color: var(--color-grey-5);
+                        background-color: rgb(200, 255, 0);
                     }
                 }
             }
@@ -254,6 +261,10 @@ section{
         h4{
             font-size: 2rem;
             text-transform: uppercase;
+        }
+        .question{
+            border: blue;
+            color: black;
         }
     }
 }
@@ -286,6 +297,27 @@ section{
                     width: 60%;
                 }
             }
+        }
+    }
+}
+
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding-bottom: 3rem;
+    .timeline-item{
+        position: relative;
+        padding-left: 3rem;
+        border-left: 1px solid var(--color-grey-5);
+        .tl-con{
+            position: absolute;
+            left: -27px;
+            top: 0;
+            background-color: var(--color-secondary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
         }
     }
 }
@@ -334,7 +366,7 @@ section{
         &::before{
             width: 100%;
             height: 100%;
-            background-color: var(--color-secondary);
+            background-color: rgb(149, 24, 24);
             transform: translateX(0);
             transition: all .4s ease-in-out;
         }
